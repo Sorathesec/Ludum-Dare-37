@@ -1,0 +1,15 @@
+diff a/Project One Room/Assets/Scripts.meta b/Project One Room/Assets/Scripts.meta	(rejected hunks)
+@@ -1,7 +1,13 @@
+ fileFormatVersion: 2
++<<<<<<< HEAD
+ guid: 96a6b1d5c78307446b4248dbdca46a02
+ folderAsset: yes
+ timeCreated: 1481378467
++=======
++guid: 9fb0993b2623f414783f430c723d121f
++folderAsset: yes
++timeCreated: 1481363967
++>>>>>>> d9e4376bce510c0e466e0545326fb575aafe35d2
+ licenseType: Free
+ DefaultImporter:
+   userData: 
