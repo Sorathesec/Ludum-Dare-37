@@ -5,6 +5,8 @@ namespace LudumDare37
 {
     public class GridInputMove : GridMoveRestrict
     {
+
+        
         new void FixedUpdate()
         {
             if (PacRabbitController.instance.GetPlaying())
