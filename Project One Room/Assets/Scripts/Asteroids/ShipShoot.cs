@@ -33,5 +33,13 @@ namespace LudumDare37
             }
             Invoke("SetFiring", fireTime);
         }
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Fire();
+            }
+        }
     }
 }
