@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Netaphous.Utilities;
 
 namespace LudumDare37
 {
@@ -21,6 +22,18 @@ namespace LudumDare37
             children = GetComponentsInChildren<Transform>();
         }
 
+        void OnEnable()
+        {
+            EventManager.StartListening("EnemiesKillable", Killable);
+            EventManager.StartListening("EnemiesSafe", Safe);
+        }
+
+        void Onisable()
+        {
+            EventManager.StopListening("EnemiesKillable", Killable);
+            EventManager.StopListening("EnemiesSafe", Safe);
+        }
+
         void Update()
         {
             if(PacRabbitController.instance.GetPlaying() && isDead)
@@ -33,32 +46,44 @@ namespace LudumDare37
             }
         }
 
+        void Killable()
+        {
+            GetComponent<GridAIMove>().animating = false;
+
+            GetComponent<GridAIMove>().theAnimator.Play("Killable");
+        }
+
+        void Safe()
+        {
+            GetComponent<GridAIMove>().animating = true;
+        }
+
         public void Kill()
         {
-            for(int i = 0; i < children.Length; i++)
-            {
-                if (children[i] != transform)
-                {
-                    children[i].gameObject.SetActive(false);
-                }
-            }
-
             GetComponent<Collider2D>().enabled = false;
-            GetComponent<GridAIMove>().enabled = false;
+            GetComponent<GridAIMove>().running = false;
 
             isDead = true;
+
+            GetComponent<GridAIMove>().theAnimator.Play("Dead");
         }
 
         public void Revive()
         {
             GetComponent<Collider2D>().enabled = true;
-            GetComponent<GridAIMove>().enabled = true;
-            for (int i = 0; i < children.Length; i++)
-            {
-                children[i].gameObject.SetActive(true);
-            }
-            
+
             isDead = false;
+
+            transform.position = startPos;
+
+            Invoke("Activate", 0.2f);
+        }
+
+        private void Activate()
+        {
+            GetComponent<GridAIMove>().ResetThis();
+            GetComponent<GridAIMove>().TryMove();
+            GetComponent<GridAIMove>().running = true;
         }
 
         public GameObject ReturnGameobject()
@@ -78,7 +103,9 @@ namespace LudumDare37
         public void Reset()
         {
             transform.position = startPos;
-            isDead = false;
+
+            Revive();
+
             GetComponent<GridAIMove>().ResetThis();
         }
     }

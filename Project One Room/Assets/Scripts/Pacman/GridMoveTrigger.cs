@@ -21,19 +21,19 @@ namespace LudumDare37
 
         void FixedUpdate()
         {
-                if (otherColliders.Count > 0)
-                {
-                    isColliding = true;
-                }
-                else
-                {
-                    isColliding = false;
-                }
+            if (otherColliders.Count > 0)
+            {
+                isColliding = true;
+            }
+            else
+            {
+                isColliding = false;
+            }
         }
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.tag != "Collectable" && 
+            if (other.tag != "Collectable" &&
                 other.tag != "KillPill")
             {
                 otherColliders.Add(other);

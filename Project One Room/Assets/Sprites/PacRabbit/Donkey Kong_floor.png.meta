@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: bdc26bafdba528c43a7e6864aa8e4112
+timeCreated: 1481402755
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Donkey Kong_floor_0
+    21300002: Donkey Kong_floor_1
+    21300004: Donkey Kong_floor_2
+    21300006: Donkey Kong_floor_3
+    21300008: Donkey Kong_floor_4
+    21300010: Donkey Kong_floor_5
+    21300012: Donkey Kong_floor_6
+    21300014: Donkey Kong_floor_7
+    21300016: Donkey Kong_floor_8
+    21300018: Donkey Kong_floor_9
+    21300020: Donkey Kong_floor_10
+    21300022: Donkey Kong_floor_11
+    21300024: Donkey Kong_floor_12
+    21300026: Donkey Kong_floor_13
+    21300028: Donkey Kong_floor_14
+    21300030: Donkey Kong_floor_15
+    21300032: Donkey Kong_floor_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Donkey Kong_floor_0
+      rect:
+        serializedVersion: 2
+        x: 2362
+        y: 403
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_1
+      rect:
+        serializedVersion: 2
+        x: 2370
+        y: 408
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_2
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 386
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_3
+      rect:
+        serializedVersion: 2
+        x: 2349
+        y: 393
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_4
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 155
+        width: 294
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_5
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 381
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_6
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 59
+        width: 583
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_7
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 96
+        width: 277
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_8
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 142
+        width: 495
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_9
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 237
+        width: 93
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_10
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 289
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_11
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 137
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_12
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 61
+        width: 56
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_13
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 102
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_14
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 14
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_15
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 36
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Donkey Kong_floor_16
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 0
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

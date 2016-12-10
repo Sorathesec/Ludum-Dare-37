@@ -5,6 +5,12 @@ namespace LudumDare37
 {
     public abstract class GridMoveRestrict : MonoBehaviour
     {
+        // Public variables
+        // To be accessed by other scripts
+        public bool animating = true;
+
+        public bool running = true;
+
         // Private variables
         // Accessible in the editor
         [SerializeField]
@@ -27,11 +33,15 @@ namespace LudumDare37
 
         // Code optimisation
         protected Transform theTransform;
+        public Animator theAnimator;
+        private Transform theSprite;
 
         // Use this for initialization
         protected void Awake()
         {
             theTransform = transform;
+            theAnimator = GetComponentInChildren<Animator>();
+            theSprite = theAnimator.transform;
 
             ResetThis();
         }
@@ -63,16 +73,26 @@ namespace LudumDare37
 
         protected void FixedUpdate()
         {
-            if (PacRabbitController.instance.GetPlaying())
+            if (PacRabbitController.instance.GetPlaying() &&
+                running)
             {
                 if (HasReachedCell())
                 {
+                    theAnimator.enabled = false;
                     TryChangeDirection();
 
                     CalculateNextPos();
                 }
+                else
+                {
+                    theAnimator.enabled = true;
+                }
 
                 Move();
+            }
+            else
+            {
+                theAnimator.enabled = false;
             }
         }
         protected bool HasReachedCell()
@@ -116,25 +136,42 @@ namespace LudumDare37
                 !leftTrigger.isColliding)
             {        // Left
                 nextPos += Vector2.left * gridSize;
+                if (animating)
+                {
+                    theAnimator.Play("Left");
+                }
             }
 
             if (direction == Vector2.right &&
                 !rightTrigger.isColliding)
             {        // Right
                 nextPos += Vector2.right * gridSize;
+                if (animating)
+                {
+                    theAnimator.Play("Right");
+                }
             }
 
             if (direction == Vector2.up &&
                 !topTrigger.isColliding)
             {        // Up
                 nextPos += Vector2.up * gridSize;
+                if (animating)
+                {
+                    theAnimator.Play("Up");
+                }
             }
 
             if (direction == Vector2.down &&
                 !bottomTrigger.isColliding)
             {        // Down
                 nextPos += Vector2.down * gridSize;
+                if (animating)
+                {
+                    theAnimator.Play("Down");
+                }
             }
+
             newDirection = direction;
         }
 

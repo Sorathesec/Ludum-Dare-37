@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Netaphous.Utilities;
 
 namespace LudumDare37
 {
@@ -30,6 +31,8 @@ namespace LudumDare37
                     other.gameObject.SetActive(false);
 
                     Invoke("NoMoreKilling", PowerupTimer);
+
+                    EventManager.TriggerEvent("EnemiesKillable");
                 }
 
                 if (other.gameObject.tag == "PacRabbitEnemy" &&
@@ -43,6 +46,7 @@ namespace LudumDare37
         private void NoMoreKilling()
         {
             canKill = false;
+            EventManager.TriggerEvent("EnemiesSafe");
         }
 
         public void Revive()
