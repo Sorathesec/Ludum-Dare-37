@@ -1,33 +1,40 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyPlayer : MonoBehaviour {
+namespace LudumDare37
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void OnTriggerEnter2D(Collider2D other)
+    public class DestroyPlayer : MonoBehaviour
     {
-        // If the entering collider is the player...
-        if (other.gameObject.tag == "Player")
+
+        // Use this for initialization
+        void Start()
         {
-            // ... the player is in range.
-            Destroy(other);
-            GameOver();
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            // If the entering collider is the player...
+            if (other.gameObject.tag == "Player")
+            {
+                // ... the player is in range.
+                Destroy(other);
+                GameOver();
+            }
+
+        }
+
+        void GameOver()
+        {
+            Application.LoadLevel(Application.loadedLevel);
         }
 
     }
-
-    void GameOver()
-    {
-        Application.LoadLevel(Application.loadedLevel);
-    }
-
 }
