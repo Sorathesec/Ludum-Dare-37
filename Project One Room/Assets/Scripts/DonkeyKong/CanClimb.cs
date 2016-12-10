@@ -19,7 +19,7 @@ namespace LudumDare37
         Rigidbody2D rigidbody2D;
         public Rigidbody2D barrelbody2D;
         public GameObject character;
-        float randomNumber=100.0f;
+        float randomNumber = 100.0f;
         public GameObject barrelObject;
         int i = 0;
         int a = 0;
@@ -37,7 +37,7 @@ namespace LudumDare37
             {
                 rigidbody2D = character.GetComponent<Rigidbody2D>();
             }
-            
+
             LadderRangeCollider = this.GetComponent<Collider2D>();
         }
 
@@ -48,7 +48,6 @@ namespace LudumDare37
             {
                 if (playerInRange == true && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)))
                 {
-                    print("hello3");
                     float y = Input.GetAxis("Vertical");
                     movement.Set(x, y);
                     rigidbody2D.velocity = movement * speed;
@@ -59,7 +58,6 @@ namespace LudumDare37
 
                 if (playerInRange == true && (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)))
                 {
-                    print("hello4");
                     float y = Input.GetAxis("Vertical");
                     movement.Set(x, y);
                     rigidbody2D.velocity = -movement * -speed;
@@ -68,11 +66,11 @@ namespace LudumDare37
 
             }
 
-            if (onlyEffectsBarrels==true) {
+            if (onlyEffectsBarrels == true)
+            {
 
                 if (barrelInRange == true && onlyReverseDirection == true)
                 {
-                    print("hello7");
                     BlockCollider1.enabled = false;
 
                     if (i < 1)
@@ -92,7 +90,6 @@ namespace LudumDare37
 
                 else if (barrelInRange == true && randomNumber <= 33.0f)
                 {
-                    print("hello6");
                     BlockCollider1.enabled = false;
 
                     if (i < 1)
@@ -100,30 +97,24 @@ namespace LudumDare37
 
                         theVelocity = barrelObject.GetComponent<Rigidbody2D>().velocity;
                         barrelVelocity = -barrelObject.GetComponent<BarrelMovement>().x;
-                        theVelocity = new Vector2(1.5f*barrelVelocity, theVelocity.y);
+                        theVelocity = new Vector2(1.5f * barrelVelocity, theVelocity.y);
                         barrelObject.GetComponent<BarrelMovement>().x = barrelVelocity;
                         Invoke("NoVelocity", 0.25f);
                         Invoke("ReverseVelocity", 0.75f);
                         i++;
                     }
-
-
-
                 }
-
-                
             }
-
         }
 
 
-    void OnTriggerEnter2D(Collider2D other)
+        void OnTriggerEnter2D(Collider2D other)
         {
             // If the entering collider is the player...
             if (other.gameObject.tag == "Player")
             {
                 // ... the player is in range.
-                playerInRange = true;              
+                playerInRange = true;
             }
 
             // If the entering collider is a barrel...
@@ -143,13 +134,11 @@ namespace LudumDare37
 
         void ReverseVelocity()
         {
-            print("hello2");
             barrelObject.GetComponent<Rigidbody2D>().velocity = theVelocity;
         }
 
         void OnlyReverseVelocity()
         {
-            print("hello");
             theVelocity = barrelObject.GetComponent<Rigidbody2D>().velocity;
             barrelVelocity = -barrelObject.GetComponent<BarrelMovement>().x;
             theVelocity = new Vector2(1.5f * barrelVelocity, theVelocity.y);
