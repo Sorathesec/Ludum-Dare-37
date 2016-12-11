@@ -10,16 +10,12 @@ namespace LudumDare37
         private float moveSpeed = 0.5f;
         Vector3 startPos;
 
-        Transform[] children;
-
         private bool isDead = false;
 
         // Use this for initialization
         void Awake()
         {
             startPos = transform.position;
-
-            children = GetComponentsInChildren<Transform>();
         }
 
         void OnEnable()

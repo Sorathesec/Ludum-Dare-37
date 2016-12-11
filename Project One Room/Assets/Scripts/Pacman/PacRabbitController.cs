@@ -115,7 +115,7 @@ namespace LudumDare37
 
         private void EndGame()
         {
-
+            Application.LoadLevel("Main");
         }
 
         public void RemoveCount()
@@ -124,7 +124,7 @@ namespace LudumDare37
             if(count <= 0)
             {
                 completed = true;
-                print("Win");
+                Application.LoadLevel("Main");
             }
         }
 

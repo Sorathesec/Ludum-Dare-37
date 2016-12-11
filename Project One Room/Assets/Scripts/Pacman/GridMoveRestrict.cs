@@ -8,7 +8,6 @@ namespace LudumDare37
         // Public variables
         // To be accessed by other scripts
         public bool animating = true;
-
         public bool running = true;
 
         // Private variables
@@ -25,6 +24,8 @@ namespace LudumDare37
         protected GridMoveTrigger leftTrigger;
         [SerializeField]
         protected GridMoveTrigger rightTrigger;
+        [SerializeField]
+        protected Transform mainObject;
 
         // Script logic
         protected Vector2 direction;
@@ -34,14 +35,12 @@ namespace LudumDare37
         // Code optimisation
         protected Transform theTransform;
         public Animator theAnimator;
-        private Transform theSprite;
 
         // Use this for initialization
         protected void Awake()
         {
             theTransform = transform;
             theAnimator = GetComponentInChildren<Animator>();
-            theSprite = theAnimator.transform;
 
             ResetThis();
         }
@@ -178,6 +177,19 @@ namespace LudumDare37
         private void Move()
         {
             transform.position = Vector3.MoveTowards(transform.position, nextPos, Time.deltaTime * moveSpeed);    // Move there
+        }
+
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Interactable interact = other.GetComponent<Interactable>();
+
+                if (interact != null)
+                {
+                    interact.Interact();
+                }
+            }
         }
     }
 }

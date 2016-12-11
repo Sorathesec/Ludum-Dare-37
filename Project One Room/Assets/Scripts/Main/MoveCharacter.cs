@@ -3,11 +3,8 @@ using System.Collections;
 
 public class MoveCharacter : MonoBehaviour
 {
-
     [SerializeField]
     private float moveSpeed = 1.0f;
-    [SerializeField]
-    private int verticalReduction = 10;
     [SerializeField]
     private float minY = -5.0f;
     [SerializeField]
@@ -17,15 +14,30 @@ public class MoveCharacter : MonoBehaviour
     [SerializeField]
     private float maxScale = 1.5f;
 
+    private static Vector3 position;
+    private Animator theAnimator;
+
+    void Awake()
+    {
+        theAnimator = GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update ()
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        move2D(x, y);
+        if(x == 0 && y == 0)
+        {
+            theAnimator.Play("Still");
+        }
+        else
+        {
+            theAnimator.Play("Walk");
+        }
 
-        Mathf.Clamp(transform.position.y, minY, maxY);
+        move2D(x, y);
     }
 
     void move2D(float x, float y)
@@ -55,23 +67,22 @@ public class MoveCharacter : MonoBehaviour
 
         float percValue = currentY / onePerc;
 
-
         float scaleRange = Mathf.Abs(maxScale -minScale);
 
         float scaOnePerc = scaleRange / 100;
 
         float newScaleValue = maxScale - (scaOnePerc * percValue);
 
-        Vector3 newScale = new Vector3(newScaleValue, newScaleValue, newScaleValue);
-
+        Vector3 newScale = transform.localScale;
+        if(x > 0)
+        {
+            newScale = new Vector3(-newScaleValue, newScaleValue, newScaleValue);
+        }
+        else if(x < 0)
+        {
+            newScale = new Vector3(newScaleValue, newScaleValue, newScaleValue);
+        }
+        
         transform.localScale = newScale;
-    }
-
-    void move3D(float x, float y)
-    {
-
-        Vector3 newPos = transform.position + new Vector3(x, 0, y);
-
-        transform.position = Vector3.MoveTowards(transform.position, newPos, Time.deltaTime * moveSpeed);
     }
 }
