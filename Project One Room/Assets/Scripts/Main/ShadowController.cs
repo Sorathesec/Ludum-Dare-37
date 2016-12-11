@@ -21,19 +21,19 @@ namespace LudumDare37
         {
             currentStage = FearController.instance.GetCurrentThreshold();
             
-            if(currentStage == 0)
+            if(currentStage <= 0)
             {
                 Stage0();
             }
-            else if (currentStage == 1)
+            else if (currentStage <= 1)
             {
                 Stage1();
             }
-            else if (currentStage == 2)
+            else if (currentStage <= 2)
             {
                 Stage2();
             }
-            else if (currentStage == 3)
+            else if (currentStage <= 3)
             {
                 Stage3();
             }

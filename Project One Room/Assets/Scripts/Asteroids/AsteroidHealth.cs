@@ -7,30 +7,15 @@ public class AsteroidHealth : MonoBehaviour {
     public AudioClip deathClip;
     public GameObject explosionPrefab;
     int randomAsteroid;
-    AudioSource enemyAudio;
     public GameObject[] asteroidPrefabs;
     GameObject newAstroid;
     Quaternion randomRotation;
     Vector2 randomPosition;
     int numberOfAstroids;
-
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    
 
     public void TakeDamage(int damage)
     {
-        if (enemyAudio != null)
-        {
-            enemyAudio.Play();
-        }
-
         health = -damage;
 
         if (health <= 0)

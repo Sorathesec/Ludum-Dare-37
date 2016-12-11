@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -13,13 +14,18 @@ namespace LudumDare37
         // Private variables
         // Accessible in the editor
         [SerializeField]
-        private int maxLives = 3;
+        private LivesHandler lives;
+        [SerializeField]
+        private Text displayText;
+        [SerializeField]
+        private int fearPenaltyValue = 5;
+        [SerializeField]
+        private float fearGrowthReduction = 1.0f;
 
         // Script logic
         private List<GameObject> collectables;
         private int count;
         private bool completed = false;
-        private int lives = 3;
         private List<GameObject> killables;
         private bool playing = false;
         private static float diminishingReturns = 1.0f;
@@ -37,8 +43,6 @@ namespace LudumDare37
 
             collectables = new List<GameObject>();
             killables = new List<GameObject>();
-
-            lives = maxLives;
         }
 
         void Start()
@@ -69,7 +73,30 @@ namespace LudumDare37
             }
         }
 
-        void Reset()
+        IEnumerator FadeInText()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                Color newColor = displayText.color;
+                newColor.a += 0.1f;
+                displayText.color = newColor;
+                yield return new WaitForSeconds(0.05f);
+            }
+            Invoke("StartPlaying", 1);
+        }
+
+        IEnumerator FadeOutText()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                Color newColor = displayText.color;
+                newColor.a -= 0.1f;
+                displayText.color = newColor;
+                yield return new WaitForSeconds(0.05f);
+            }
+        }
+
+        private void Reset()
         {
             for (int i = 0; i < collectables.Count; i++)
             {
@@ -81,7 +108,8 @@ namespace LudumDare37
             }
             count = collectables.Count;
             completed = false;
-            Invoke("StartPlaying", 2.0f);
+
+            StartCoroutine(FadeInText());
         }
 
         public void SoftReset()
@@ -101,24 +129,27 @@ namespace LudumDare37
         private void StartPlaying()
         {
             playing = true;
+            StartCoroutine(FadeOutText());
         }
 
         public void RemoveLife()
         {
-            lives--;
+            bool result = lives.RemoveLife();
 
-            FearController.instance.AddFear(5);
-            if(lives <= 0)
+            FearController.instance.AddFear(fearPenaltyValue);
+
+            if(result)
             {
                 EndGame();
             }
+
             playing = false;
             SoftReset();
         }
 
         private void EndGame()
         {
-            FearController.instance.AddFear(5);
+            FearController.instance.AddFear(fearPenaltyValue);
             Application.LoadLevel("Main");
         }
 
@@ -127,24 +158,24 @@ namespace LudumDare37
             count--;
             if(count <= 0)
             {
-                completed = true;
-                FearController.instance.ReduceFearSpeed(1f / diminishingReturns);
-
-                diminishingReturns = diminishingReturns / 3 * 2;
-
-                Application.LoadLevel("Main");
+                Victory();
             }
+        }
+
+        private void Victory()
+        {
+            completed = true;
+            FearController.instance.ReduceFearSpeed(fearGrowthReduction / diminishingReturns);
+
+            diminishingReturns = diminishingReturns / 3 * 2;
+
+            Application.LoadLevel("Main");
+
         }
 
         public int GetCount()
         {
             return count;
-        }
-
-        void OnGUI()
-        {
-            GUI.Label(new Rect(20, 20, 300, 40), "PacRabbit Count left: " + count);
-            GUI.Label(new Rect(20, 40, 300, 40), "PacRabbit Lives left: " + lives);
         }
     }
 }

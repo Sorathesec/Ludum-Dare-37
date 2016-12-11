@@ -9,16 +9,11 @@ namespace LudumDare37
 
         public float speed = 5.0f;
         public float destroyTime = 1.5f;
-        bool left = false;
-        bool right = false;
-        bool top = false;
-        bool bottom = false;
 
         void Start()
         {
             Invoke("Die", destroyTime);
             speed = Random.Range(0.5f, 1.5f);
-            CalculatePosition();
         }
 
         void Die()
@@ -34,11 +29,6 @@ namespace LudumDare37
         void FixedUpdate()
         {
             GetComponent<Rigidbody2D>().velocity = transform.up * speed;
-        }
-
-        void CalculatePosition()
-        {
-
         }
     }
 }

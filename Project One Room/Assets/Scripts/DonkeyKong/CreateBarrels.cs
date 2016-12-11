@@ -9,7 +9,6 @@ namespace LudumDare37
 
         public GameObject[] barrelPrefab;
         public Transform barrelSpawn;
-        float randomNumber;
 
         // Use this for initialization
         void Start()
@@ -17,16 +16,9 @@ namespace LudumDare37
             InstantiateBarrel();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
         void InstantiateBarrel()
         {
             Instantiate(barrelPrefab[Mathf.RoundToInt(Random.Range(-0.49f, 1.49f))], barrelSpawn.position, barrelSpawn.rotation);
-            randomNumber = Random.Range(2.0f, 4.0f);
             Invoke("InstantiateBarrel", 3.0f);
         }
     }

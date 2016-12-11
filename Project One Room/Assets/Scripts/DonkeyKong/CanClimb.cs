@@ -6,8 +6,6 @@ namespace LudumDare37
 
     public class CanClimb : MonoBehaviour
     {
-
-        private Collider2D LadderRangeCollider;
         public Collider2D BlockCollider1;
         Collider2D BarrelCollider;
         bool playerInRange;
@@ -22,8 +20,6 @@ namespace LudumDare37
         float randomNumber = 100.0f;
         public GameObject barrelObject;
         int i = 0;
-        int a = 0;
-        float barrelSpeed = 1;
         Vector2 theVelocity;
         float distToGround;
         public bool onlyReverseDirection;
@@ -37,8 +33,6 @@ namespace LudumDare37
             {
                 rigidbody2D = character.GetComponent<Rigidbody2D>();
             }
-
-            LadderRangeCollider = this.GetComponent<Collider2D>();
         }
 
         // Update is called once per frame

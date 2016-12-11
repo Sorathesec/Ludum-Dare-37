@@ -11,7 +11,6 @@ namespace LudumDare37
         Vector2 barrelMovement;
         public float speed = -5.0f;
         public float x = 1;
-        float y = 0;
 
         // Use this for initialization
         void Start()

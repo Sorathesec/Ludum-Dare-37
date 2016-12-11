@@ -9,17 +9,14 @@ namespace LudumDare37
         public float speed = 10, jumpVelocity = 10;
         public LayerMask playerMask;
         public bool canMoveInAir = true;
-        Transform myTrans, tagGround;
         Rigidbody2D myBody;
         bool isGrounded = true;
-        float hInput = 0;
         float y = 0;
         Vector2 movement;
 
         void Start()
         {
             myBody = this.GetComponent<Rigidbody2D>();
-            myTrans = this.transform;
             
         }
 
@@ -66,11 +63,6 @@ namespace LudumDare37
                 myBody.velocity += jumpVelocity * Vector2.up;
                 NoLongerGrounded();
             }
-        }
-
-        public void StartMoving(float horizonalInput)
-        {
-            hInput = horizonalInput;
         }
 
         public void NoLongerGrounded()
