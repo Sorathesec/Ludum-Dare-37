@@ -10,7 +10,6 @@ namespace LudumDare37
         public GameObject bulletPrefab;
         public Transform bulletSpawn;  //An array of spawn points bullets can spawn from.
         public float fireTime = 0.2f;
-        AudioSource gunAudio;
         public AudioClip shootClip;
 
         private bool isFiring = false;
@@ -26,11 +25,6 @@ namespace LudumDare37
             isFiring = true;
             Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
-            if (gunAudio != null)
-            {
-                gunAudio.clip = shootClip;
-                gunAudio.Play();
-            }
             Invoke("SetFiring", fireTime);
         }
 

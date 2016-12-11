@@ -9,11 +9,10 @@ namespace LudumDare37
         // To be accessed by other scripts
         public bool animating = true;
         public bool running = true;
+        public float moveSpeed = 1.0f;
 
         // Private variables
         // Accessible in the editor
-        [SerializeField]
-        private float moveSpeed = 1.0f;
         [SerializeField]
         protected float gridSize = 0.5f;
         [SerializeField]

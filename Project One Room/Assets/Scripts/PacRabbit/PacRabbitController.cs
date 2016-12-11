@@ -20,7 +20,9 @@ namespace LudumDare37
         [SerializeField]
         private int fearPenaltyValue = 5;
         [SerializeField]
-        private float fearGrowthReduction = 1.0f;
+        private int fearReductionValue = 20;
+        [SerializeField]
+        private int carrotsForBonus = 20;
 
         // Script logic
         private List<GameObject> collectables;
@@ -29,6 +31,7 @@ namespace LudumDare37
         private List<GameObject> killables;
         private bool playing = false;
         private static float diminishingReturns = 1.0f;
+        private int bonusCounter = 0;
         
         void Awake()
         {
@@ -150,12 +153,22 @@ namespace LudumDare37
         private void EndGame()
         {
             FearController.instance.AddFear(fearPenaltyValue);
+            FadeMusic.instance.switchToRoom();
             Application.LoadLevel("Main");
         }
 
         public void RemoveCount()
         {
             count--;
+
+            bonusCounter++;
+
+            if(bonusCounter >= carrotsForBonus)
+            {
+                FearController.instance.RemoveFear(1);
+                bonusCounter -= carrotsForBonus;
+            }
+
             if(count <= 0)
             {
                 Victory();
@@ -165,12 +178,12 @@ namespace LudumDare37
         private void Victory()
         {
             completed = true;
-            FearController.instance.ReduceFearSpeed(fearGrowthReduction / diminishingReturns);
+            FearController.instance.RemoveFear((int)(fearReductionValue * diminishingReturns));
 
-            diminishingReturns = diminishingReturns / 3 * 2;
+            diminishingReturns = diminishingReturns / 3.0f * 2.0f;
 
+            FadeMusic.instance.switchToRoom();
             Application.LoadLevel("Main");
-
         }
 
         public int GetCount()

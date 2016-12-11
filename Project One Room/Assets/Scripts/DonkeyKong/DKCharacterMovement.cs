@@ -5,32 +5,42 @@ namespace LudumDare37
 {
     public class DKCharacterMovement : MonoBehaviour
     {
-
         public float speed = 10, jumpVelocity = 10;
-        public LayerMask playerMask;
         public bool canMoveInAir = true;
         Rigidbody2D myBody;
         bool isGrounded = true;
         float y = 0;
         Vector2 movement;
+        Vector3 startPos;
 
         void Start()
         {
             myBody = this.GetComponent<Rigidbody2D>();
-            
+            startPos = transform.position;
+        }
+
+        void Reset()
+        {
+            isGrounded = true;
+            transform.position = startPos;
+            movement = Vector2.zero;
+            y = 0;
         }
 
         void FixedUpdate()
         {
             float x = Input.GetAxis("Horizontal");
 
-            if(x == 0)
+            if (isGrounded)
             {
-                GetComponent<Animator>().Play("Still");
-            }
-            else
-            {
-                GetComponent<Animator>().Play("Walk");
+                if (x == 0)
+                {
+                    GetComponent<Animator>().Play("Still");
+                }
+                else
+                {
+                    GetComponent<Animator>().Play("Walk");
+                }
             }
 
             if(x > 0)
@@ -52,6 +62,7 @@ namespace LudumDare37
             {
                 print("space key was pressed");
                 Jump();
+                GetComponent<Animator>().Play("Jump");
             }
         }
 

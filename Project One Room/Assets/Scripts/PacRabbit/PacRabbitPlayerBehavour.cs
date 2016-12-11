@@ -11,6 +11,8 @@ namespace LudumDare37
         // Accessible in the editor
         [SerializeField]
         private float PowerupTimer = 5.0f;
+        [SerializeField]
+        private int fearLossFromKill = 3;
 
         // Script logic
         private bool canKill = false;
@@ -39,6 +41,7 @@ namespace LudumDare37
                     canKill == true)
                 {
                     other.gameObject.SendMessage("Kill");
+                    FearController.instance.RemoveFear(fearLossFromKill);
                 }
             }
         }

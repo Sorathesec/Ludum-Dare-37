@@ -128,7 +128,10 @@ namespace LudumDare37
 
         void ReverseVelocity()
         {
-            barrelObject.GetComponent<Rigidbody2D>().velocity = theVelocity;
+            if (barrelObject != null)
+            {
+                barrelObject.GetComponent<Rigidbody2D>().velocity = theVelocity;
+            }
         }
 
         void OnlyReverseVelocity()
