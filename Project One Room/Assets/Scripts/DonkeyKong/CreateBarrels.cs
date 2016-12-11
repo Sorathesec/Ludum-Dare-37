@@ -7,7 +7,7 @@ namespace LudumDare37
     public class CreateBarrels : MonoBehaviour
     {
 
-        public GameObject barrelPrefab;
+        public GameObject[] barrelPrefab;
         public Transform barrelSpawn;
         float randomNumber;
 
@@ -25,7 +25,7 @@ namespace LudumDare37
 
         void InstantiateBarrel()
         {
-            Instantiate(barrelPrefab, barrelSpawn.position, barrelSpawn.rotation);
+            Instantiate(barrelPrefab[Mathf.RoundToInt(Random.Range(-0.49f, 1.49f))], barrelSpawn.position, barrelSpawn.rotation);
             randomNumber = Random.Range(2.0f, 4.0f);
             Invoke("InstantiateBarrel", 3.0f);
         }
