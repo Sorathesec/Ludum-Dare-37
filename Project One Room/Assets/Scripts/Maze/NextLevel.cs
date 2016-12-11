@@ -18,18 +18,26 @@ public class NextLevel : MonoBehaviour {
             {
                 nextTriggerGroup.SetActive(true);
             }
-            if (nextLevel)
+            if (nextLevel != null)
             {
                 nextLevel.SetActive(true);
             }
-            if (nextEnd)
+            if (nextEnd != null)
             {
                 nextEnd.SetActive(true);
             }
-            
-            previousTriggerGroup.SetActive(false);
-            previousLevel.SetActive(false);
-            previousEnd.SetActive(false);
+            if (previousTriggerGroup != null)
+            {
+                previousTriggerGroup.SetActive(false);
+            }
+            if (previousLevel != null)
+            {
+                previousLevel.SetActive(false);
+            }
+            if (previousEnd != null)
+            {
+                previousEnd.SetActive(false);
+            }
         }
     }
 }
