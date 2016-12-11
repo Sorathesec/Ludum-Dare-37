@@ -6,8 +6,8 @@ public class ReplaceCursor : MonoBehaviour {
     public Texture2D cursorTexture;  // Your cursor texture
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
-    int cursorSizeX = 16;  // set to width of your cursor texture
-    int cursorSizeY = 24;  // set to height of your cursor texture
+    int cursorSizeX = 12;  // set to width of your cursor texture
+    int cursorSizeY = 16;  // set to height of your cursor texture
 
     void Start()
     {
