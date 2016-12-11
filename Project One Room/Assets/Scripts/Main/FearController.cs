@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 namespace LudumDare37
@@ -15,6 +16,15 @@ namespace LudumDare37
 
         [SerializeField]
         private float fearIncreaseDelay = 5;
+        [SerializeField]
+        private float survivalTimer = 600;
+
+        [SerializeField]
+        private Text endGameText;
+
+        private float finishTimer;
+
+        private bool gameOver = false;
 
         // Use this for initialization
         void Awake()
@@ -31,6 +41,30 @@ namespace LudumDare37
             DontDestroyOnLoad(instance);
 
             StartCoroutine(IncreaseFear());
+
+            finishTimer = Time.time + survivalTimer;
+        }
+
+        void Update()
+        {
+            if(!gameOver && Time.time >= finishTimer)
+            {
+                Victory();
+            }
+        }
+
+        private void Victory()
+        {
+            gameOver = true;
+            endGameText.gameObject.SetActive(true);
+            endGameText.text = "You win!";
+        }
+
+        private void GameOver()
+        {
+            gameOver = true;
+            endGameText.gameObject.SetActive(true);
+            endGameText.text = "You lose!";
         }
 
         IEnumerator IncreaseFear()
@@ -40,16 +74,10 @@ namespace LudumDare37
                 fearLevel++;
                 yield return new WaitForSeconds(fearIncreaseDelay);
             }
-        }
-
-        public void IncreaseFearSpeed(float speedIncrease)
-        {
-            fearIncreaseDelay -= speedIncrease;
-        }
-
-        public void ReduceFearSpeed(float speedDecrease)
-        {
-            fearIncreaseDelay += speedDecrease;
+            if(!gameOver)
+            {
+                GameOver();
+            }
         }
 
         public void AddFear(int fearAmount)

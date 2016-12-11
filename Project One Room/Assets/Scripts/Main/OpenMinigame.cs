@@ -9,13 +9,32 @@ namespace LudumDare37
         [SerializeField]
         private string minigameScene;
 
-        void OnTriggerStay2D(Collider2D other)
+        private bool canInteract = false;
+
+        void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.tag == "Player" &&
+            if (other.gameObject.tag == "Player")
+            {
+                canInteract = true;
+            }
+        }
+
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                canInteract = false;
+            }
+        }
+
+        void Update()
+        {
+            if (canInteract && 
                 Input.GetKeyDown(KeyCode.E))
             {
-                Application.LoadLevel(minigameScene);
+                FadeMusic.instance.switchToGame();
 
+                Application.LoadLevel(minigameScene);
             }
         }
     }

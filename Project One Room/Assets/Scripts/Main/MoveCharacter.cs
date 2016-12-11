@@ -76,6 +76,8 @@ namespace LudumDare37
             float newScaleValue = maxScale - (scaOnePerc * percValue);
 
             Vector3 newScale = transform.localScale;
+            newScale.x = newScaleValue;
+            newScale.y = newScaleValue;
             if (x > 0)
             {
                 GetComponent<SpriteRenderer>().flipX = true;

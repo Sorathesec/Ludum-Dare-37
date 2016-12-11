@@ -12,6 +12,8 @@ namespace LudumDare37
 
         private bool isDead = false;
 
+        private float topSpeed;
+
         // Use this for initialization
         void Awake()
         {
@@ -47,11 +49,15 @@ namespace LudumDare37
             GetComponent<GridAIMove>().animating = false;
 
             GetComponent<GridAIMove>().theAnimator.Play("Killable");
+            topSpeed = GetComponent<GridAIMove>().moveSpeed;
+            GetComponent<GridAIMove>().moveSpeed = topSpeed / 4 * 3;
         }
 
         void Safe()
         {
             GetComponent<GridAIMove>().animating = true;
+
+            GetComponent<GridAIMove>().moveSpeed = topSpeed;
         }
 
         public void Kill()

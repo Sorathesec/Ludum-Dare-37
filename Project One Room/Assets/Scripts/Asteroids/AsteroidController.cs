@@ -106,14 +106,13 @@ namespace LudumDare37
 
             diminishingReturns = diminishingReturns / 3 * 2;
 
+            FadeMusic.instance.switchToRoom();
             Application.LoadLevel("Main");
         }
 
         public void RemoveLife()
         {
             bool result = lives.RemoveLife();
-
-            FearController.instance.AddFear(fearPenaltyValue);
 
             if (result)
             {
@@ -148,6 +147,8 @@ namespace LudumDare37
         private void EndGame()
         {
             FearController.instance.AddFear(fearPenaltyValue);
+
+            FadeMusic.instance.switchToRoom();
             Application.LoadLevel("Main");
         }
     }
