@@ -59,6 +59,7 @@ namespace LudumDare37
             if (!canKill)
             {
                 PacRabbitController.instance.RemoveLife();
+                GetComponent<GridInputMove>().theAnimator.enabled = false;
             }
         }
 

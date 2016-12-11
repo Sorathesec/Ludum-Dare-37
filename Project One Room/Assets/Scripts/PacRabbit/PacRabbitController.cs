@@ -22,6 +22,7 @@ namespace LudumDare37
         private int lives = 3;
         private List<GameObject> killables;
         private bool playing = false;
+        private static float diminishingReturns = 1.0f;
         
         void Awake()
         {
@@ -105,6 +106,8 @@ namespace LudumDare37
         public void RemoveLife()
         {
             lives--;
+
+            FearController.instance.AddFear(5);
             if(lives <= 0)
             {
                 EndGame();
@@ -115,6 +118,7 @@ namespace LudumDare37
 
         private void EndGame()
         {
+            FearController.instance.AddFear(5);
             Application.LoadLevel("Main");
         }
 
@@ -124,6 +128,10 @@ namespace LudumDare37
             if(count <= 0)
             {
                 completed = true;
+                FearController.instance.ReduceFearSpeed(1f / diminishingReturns);
+
+                diminishingReturns = diminishingReturns / 3 * 2;
+
                 Application.LoadLevel("Main");
             }
         }
