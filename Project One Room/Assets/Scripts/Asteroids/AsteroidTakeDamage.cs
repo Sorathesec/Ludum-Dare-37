@@ -19,6 +19,7 @@ public class AsteroidTakeDamage : MonoBehaviour {
     {
         if (other.CompareTag("Shootable"))
         {
+            print("astroid shot");
             other.SendMessage("TakeDamage", damage);
             Destroy(gameObject);
         }
