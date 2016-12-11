@@ -36,7 +36,7 @@ namespace LudumDare37
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 print("space key was pressed");
-                Jump();    
+                Jump();
             }
         }
 
