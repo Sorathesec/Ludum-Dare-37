@@ -23,6 +23,24 @@ namespace LudumDare37
         void FixedUpdate()
         {
             float x = Input.GetAxis("Horizontal");
+
+            if(x == 0)
+            {
+                GetComponent<Animator>().Play("Still");
+            }
+            else
+            {
+                GetComponent<Animator>().Play("Walk");
+            }
+
+            if(x > 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if(x < 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
             Move(x);
             
             //isGrounded = Physics2D.Linecast(myTrans.position, tagGround.position, playerMask);
