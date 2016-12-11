@@ -5,8 +5,6 @@ public class MoveBarrels : MonoBehaviour
 {
     [SerializeField]
     private bool left = false;
-    [SerializeField]
-    private float speed = 6;
     void OnTriggerStay2D(Collider2D other)
     {
         if(other.tag == "Barrel")

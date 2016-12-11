@@ -40,8 +40,6 @@ namespace LudumDare37
 
             DontDestroyOnLoad(instance);
 
-            StartCoroutine(IncreaseFear());
-
             finishTimer = Time.time + survivalTimer;
         }
 
@@ -51,6 +49,11 @@ namespace LudumDare37
             {
                 Victory();
             }
+        }
+
+        public  void StartGame()
+        {
+            StartCoroutine(IncreaseFear());
         }
 
         private void Victory()
