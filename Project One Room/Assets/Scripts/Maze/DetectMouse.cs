@@ -1,13 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DetectMouse : MonoBehaviour {
-
-    void Start()
-    {
-
-    }
-
+public class DetectMouse : MonoBehaviour
+{
     void Update()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);

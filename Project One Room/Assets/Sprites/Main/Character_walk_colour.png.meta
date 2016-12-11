@@ -1,0 +1,1039 @@
+fileFormatVersion: 2
+guid: a63ba2740e055634dbf59902589c95a0
+timeCreated: 1481483496
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Character_walk_colour_0
+    21300002: Character_walk_colour_1
+    21300004: Character_walk_colour_2
+    21300006: Character_walk_colour_3
+    21300008: Character_walk_colour_4
+    21300010: Character_walk_colour_5
+    21300012: Character_walk_colour_6
+    21300014: Character_walk_colour_7
+    21300016: Character_walk_colour_8
+    21300018: Character_walk_colour_9
+    21300020: Character_walk_colour_10
+    21300022: Character_walk_colour_11
+    21300024: Character_walk_colour_12
+    21300026: Character_walk_colour_13
+    21300028: Character_walk_colour_14
+    21300030: Character_walk_colour_15
+    21300032: Character_walk_colour_16
+    21300034: Character_walk_colour_17
+    21300036: Character_walk_colour_18
+    21300038: Character_walk_colour_19
+    21300040: Character_walk_colour_20
+    21300042: Character_walk_colour_21
+    21300044: Character_walk_colour_22
+    21300046: Character_walk_colour_23
+    21300048: Character_walk_colour_24
+    21300050: Character_walk_colour_25
+    21300052: Character_walk_colour_26
+    21300054: Character_walk_colour_27
+    21300056: Character_walk_colour_28
+    21300058: Character_walk_colour_29
+    21300060: Character_walk_colour_30
+    21300062: Character_walk_colour_31
+    21300064: Character_walk_colour_32
+    21300066: Character_walk_colour_33
+    21300068: Character_walk_colour_34
+    21300070: Character_walk_colour_35
+    21300072: Character_walk_colour_36
+    21300074: Character_walk_colour_37
+    21300076: Character_walk_colour_38
+    21300078: Character_walk_colour_39
+    21300080: Character_walk_colour_40
+    21300082: Character_walk_colour_41
+    21300084: Character_walk_colour_42
+    21300086: Character_walk_colour_43
+    21300088: Character_walk_colour_44
+    21300090: Character_walk_colour_45
+    21300092: Character_walk_colour_46
+    21300094: Character_walk_colour_47
+    21300096: Character_walk_colour_48
+    21300098: Character_walk_colour_49
+    21300100: Character_walk_colour_50
+    21300102: Character_walk_colour_51
+    21300104: Character_walk_colour_52
+    21300106: Character_walk_colour_53
+    21300108: Character_walk_colour_54
+    21300110: Character_walk_colour_55
+    21300112: Character_walk_colour_56
+    21300114: Character_walk_colour_57
+    21300116: Character_walk_colour_58
+    21300118: Character_walk_colour_59
+    21300120: Character_walk_colour_60
+    21300122: Character_walk_colour_61
+    21300124: Character_walk_colour_62
+    21300126: Character_walk_colour_63
+    21300128: Character_walk_colour_64
+    21300130: Character_walk_colour_65
+    21300132: Character_walk_colour_66
+    21300134: Character_walk_colour_67
+    21300136: Character_walk_colour_68
+    21300138: Character_walk_colour_69
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Character_walk_colour_0
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 266
+        width: 793
+        height: 1630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_1
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 244
+        width: 700
+        height: 1642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_2
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 1234
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_3
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 224
+        width: 755
+        height: 1541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_4
+      rect:
+        serializedVersion: 2
+        x: 3326
+        y: 154
+        width: 893
+        height: 1713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_5
+      rect:
+        serializedVersion: 2
+        x: 4574
+        y: 270
+        width: 793
+        height: 1631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_6
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 275
+        width: 711
+        height: 1616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_7
+      rect:
+        serializedVersion: 2
+        x: 6919
+        y: 184
+        width: 755
+        height: 1581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_8
+      rect:
+        serializedVersion: 2
+        x: 8315
+        y: 259
+        width: 672
+        height: 1598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_9
+      rect:
+        serializedVersion: 2
+        x: 9335
+        y: 266
+        width: 557
+        height: 1591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_10
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 341
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_11
+      rect:
+        serializedVersion: 2
+        x: 4571
+        y: 341
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_12
+      rect:
+        serializedVersion: 2
+        x: 5726
+        y: 327
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_13
+      rect:
+        serializedVersion: 2
+        x: 4566
+        y: 322
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_14
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 317
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_15
+      rect:
+        serializedVersion: 2
+        x: 4501
+        y: 268
+        width: 74
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_16
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 258
+        width: 89
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_17
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 281
+        width: 59
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_18
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 278
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_19
+      rect:
+        serializedVersion: 2
+        x: 5336
+        y: 286
+        width: 59
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_20
+      rect:
+        serializedVersion: 2
+        x: 5655
+        y: 242
+        width: 518
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_21
+      rect:
+        serializedVersion: 2
+        x: 2776
+        y: 210
+        width: 35
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_22
+      rect:
+        serializedVersion: 2
+        x: 4576
+        y: 263
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_23
+      rect:
+        serializedVersion: 2
+        x: 4629
+        y: 258
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_24
+      rect:
+        serializedVersion: 2
+        x: 4839
+        y: 254
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_25
+      rect:
+        serializedVersion: 2
+        x: 4883
+        y: 253
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_26
+      rect:
+        serializedVersion: 2
+        x: 4941
+        y: 257
+        width: 64
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_27
+      rect:
+        serializedVersion: 2
+        x: 6328
+        y: 257
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_28
+      rect:
+        serializedVersion: 2
+        x: 8287
+        y: 222
+        width: 59
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_29
+      rect:
+        serializedVersion: 2
+        x: 8988
+        y: 224
+        width: 153
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_30
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 253
+        width: 29
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_31
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 249
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_32
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 249
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_33
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 249
+        width: 63
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_34
+      rect:
+        serializedVersion: 2
+        x: 4118
+        y: 249
+        width: 103
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_35
+      rect:
+        serializedVersion: 2
+        x: 8732
+        y: 145
+        width: 449
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_36
+      rect:
+        serializedVersion: 2
+        x: 9097
+        y: 242
+        width: 84
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_37
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 239
+        width: 87
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_38
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 244
+        width: 18
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_39
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 244
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_40
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 244
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_41
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 244
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_42
+      rect:
+        serializedVersion: 2
+        x: 6182
+        y: 239
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_43
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 193
+        width: 128
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_44
+      rect:
+        serializedVersion: 2
+        x: 2534
+        y: 218
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_45
+      rect:
+        serializedVersion: 2
+        x: 5092
+        y: 219
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_46
+      rect:
+        serializedVersion: 2
+        x: 5112
+        y: 199
+        width: 116
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_47
+      rect:
+        serializedVersion: 2
+        x: 6207
+        y: 190
+        width: 142
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_48
+      rect:
+        serializedVersion: 2
+        x: 8399
+        y: 213
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_49
+      rect:
+        serializedVersion: 2
+        x: 8443
+        y: 212
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_50
+      rect:
+        serializedVersion: 2
+        x: 8508
+        y: 210
+        width: 204
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_51
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 215
+        width: 33
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_52
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 185
+        width: 204
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_53
+      rect:
+        serializedVersion: 2
+        x: 2551
+        y: 193
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_54
+      rect:
+        serializedVersion: 2
+        x: 2695
+        y: 210
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_55
+      rect:
+        serializedVersion: 2
+        x: 7463
+        y: 183
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_56
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 200
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_57
+      rect:
+        serializedVersion: 2
+        x: 2783
+        y: 185
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_58
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 185
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_59
+      rect:
+        serializedVersion: 2
+        x: 5355
+        y: 190
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_60
+      rect:
+        serializedVersion: 2
+        x: 5375
+        y: 190
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_61
+      rect:
+        serializedVersion: 2
+        x: 6403
+        y: 180
+        width: 45
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_62
+      rect:
+        serializedVersion: 2
+        x: 7528
+        y: 126
+        width: 243
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_63
+      rect:
+        serializedVersion: 2
+        x: 2841
+        y: 185
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_64
+      rect:
+        serializedVersion: 2
+        x: 6917
+        y: 52
+        width: 893
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_65
+      rect:
+        serializedVersion: 2
+        x: 2737
+        y: 130
+        width: 241
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_66
+      rect:
+        serializedVersion: 2
+        x: 2919
+        y: 151
+        width: 102
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_67
+      rect:
+        serializedVersion: 2
+        x: 7714
+        y: 149
+        width: 98
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_68
+      rect:
+        serializedVersion: 2
+        x: 2339
+        y: 121
+        width: 97
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Character_walk_colour_69
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 54
+        width: 333
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

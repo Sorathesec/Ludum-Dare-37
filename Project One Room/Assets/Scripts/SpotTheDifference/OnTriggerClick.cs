@@ -12,6 +12,8 @@ namespace LudumDare37
         [SerializeField]
         private int fearRemovalValue = 20;
 
+        private static float diminishingReturns = 1.0f;
+
         int circlesHighlighted = 0;
         Collider2D target;
         public GameObject Wrong;
@@ -95,7 +97,19 @@ namespace LudumDare37
         {
             if (circlesHighlighted >= 5)
             {
-                FearController.instance.RemoveFear(fearRemovalValue);
+                int fearReduction = (int)(fearRemovalValue / diminishingReturns);
+                if (fearReduction < 1)
+                {
+                    fearReduction = 1;
+                }
+
+                FearController.instance.RemoveFear(fearReduction);
+
+                diminishingReturns = diminishingReturns / 3;
+
+                FadeMusic.instance.switchToRoom();
+                Application.LoadLevel("Main");
+
                 Invoke("ReturnToMenu", 1.0f);
             }
         }

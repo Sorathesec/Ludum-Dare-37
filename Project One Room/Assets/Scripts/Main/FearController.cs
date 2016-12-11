@@ -8,11 +8,9 @@ namespace LudumDare37
     {
         public static FearController instance;
 
-        public int fearLevel = 0;
+        public static bool isPlaying = false;
 
-        public int stage1Threshold;
-        public int stage2Threshold;
-        public int stage3Threshold;
+        public int fearLevel = 0;
 
         [SerializeField]
         private float fearIncreaseDelay = 5;
@@ -20,7 +18,10 @@ namespace LudumDare37
         private float survivalTimer = 600;
 
         [SerializeField]
-        private Text endGameText;
+        private GameObject victoryScreen;
+
+        [SerializeField]
+        private GameObject lossScreen;
 
         private float finishTimer;
 
@@ -51,23 +52,22 @@ namespace LudumDare37
             }
         }
 
-        public  void StartGame()
+        public void StartGame()
         {
+            FearController.isPlaying = true;
             StartCoroutine(IncreaseFear());
         }
 
         private void Victory()
         {
             gameOver = true;
-            endGameText.gameObject.SetActive(true);
-            endGameText.text = "You win!";
+            victoryScreen.SetActive(true);
         }
 
         private void GameOver()
         {
             gameOver = true;
-            endGameText.gameObject.SetActive(true);
-            endGameText.text = "You lose!";
+            lossScreen.SetActive(true);
         }
 
         IEnumerator IncreaseFear()
@@ -91,27 +91,10 @@ namespace LudumDare37
         public void RemoveFear(int fearAmount)
         {
             fearLevel -= fearAmount;
-        }
-
-        public int GetCurrentThreshold()
-        {
-            if (fearLevel < stage1Threshold)
+            if(fearLevel < 0)
             {
-                return 0;
+                fearLevel = 0;
             }
-            else if (fearLevel < stage2Threshold)
-            {
-                return 1;
-            }
-            else if (fearLevel < stage3Threshold)
-            {
-                return 2;
-            }
-            else if(fearLevel <= 100)
-            {
-                return 3;
-            }
-            return -1;
         }
     }
 }

@@ -32,10 +32,18 @@ namespace LudumDare37
             if (canInteract && 
                 Input.GetKeyDown(KeyCode.E))
             {
-                FadeMusic.instance.switchToGame();
+                GameObject.FindWithTag("Player").GetComponent<MoveCharacter>().enabled = false;
 
-                Application.LoadLevel(minigameScene);
+                GameObject.FindWithTag("Player").GetComponent<Animator>().Play("Interact");
+                Invoke("SwitchScene", 0.7f);
             }
+        }
+
+        private void SwitchScene()
+        {
+            FadeMusic.instance.switchToGame();
+
+            Application.LoadLevel(minigameScene);
         }
     }
 }
