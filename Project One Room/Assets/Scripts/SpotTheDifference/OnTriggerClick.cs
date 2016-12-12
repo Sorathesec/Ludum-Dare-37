@@ -13,6 +13,13 @@ namespace LudumDare37
         [SerializeField]
         private int fearRemovalValue = 20;
 
+        [SerializeField]
+        private GameObject rewardImage;
+
+        [SerializeField]
+        private GameObject[] displayImages;
+
+
         private static float diminishingReturns = 1.0f;
 
         int circlesHighlighted = 0;
@@ -107,13 +114,28 @@ namespace LudumDare37
                 FearController.instance.RemoveFear(fearReduction);
 
                 diminishingReturns = diminishingReturns / 3;
-                
-                Invoke("ReturnToMenu", 1.0f);
+
+                DisplayVictoryScreen();
             }
         }
 
+        void DisplayVictoryScreen()
+        {
+            for(int i = 0; i < displayImages.Length; i++)
+            {
+                displayImages[i].SetActive(false);
+            }
+
+            rewardImage.SetActive(true);
+
+            Invoke("ReturnToMenu", 5.0f);
+        }
+
+
         void ReturnToMenu()
         {
+            DisableSpotTheDifference.willDisable = true;
+
             FadeMusic.instance.switchToRoom();
 
             SceneManager.LoadScene("Main");
