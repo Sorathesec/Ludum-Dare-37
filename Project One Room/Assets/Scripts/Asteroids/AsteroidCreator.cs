@@ -44,7 +44,7 @@ namespace LudumDare37
                 }
             }
 
-            createTime = Random.Range(0.75f, 1.75f);
+            createTime = Random.Range(0.5f, 1.5f);
             Invoke("Create", createTime);
         }
     }
