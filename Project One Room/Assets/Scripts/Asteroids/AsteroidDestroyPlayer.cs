@@ -5,7 +5,7 @@ namespace LudumDare37
 {
     public class AsteroidDestroyPlayer : MonoBehaviour
     {
-        void OnTriggerEnter2D(Collider2D other)
+        void OnCollisionEnter2D(Collision2D other)
         {
             // If the entering collider is the player...
             if (other.gameObject.tag == "Player")
