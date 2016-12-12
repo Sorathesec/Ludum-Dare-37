@@ -114,6 +114,8 @@ namespace LudumDare37
         {
             bool result = lives.RemoveLife();
 
+            FearController.instance.AddFear(fearPenaltyValue);
+
             if (result)
             {
                 EndGame();
