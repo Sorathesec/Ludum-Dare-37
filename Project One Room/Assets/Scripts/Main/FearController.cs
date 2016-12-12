@@ -40,7 +40,7 @@ namespace LudumDare37
             }
             else
             {
-                Destroy(this);
+                Destroy(gameObject);
             }
 
             DontDestroyOnLoad(instance);
