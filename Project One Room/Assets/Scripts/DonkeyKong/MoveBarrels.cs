@@ -1,27 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveBarrels : MonoBehaviour
+namespace LudumDare37
 {
-    [SerializeField]
-    private bool left = false;
-    void OnTriggerStay2D(Collider2D other)
+    public class MoveBarrels : MonoBehaviour
     {
-        if(other.tag == "Barrel")
+        [SerializeField]
+        private bool left = false;
+
+        void OnTriggerStay2D(Collider2D other)
         {
-            Rigidbody2D temp = other.GetComponent<Rigidbody2D>();
-            if(left)
+            if (other.tag == "Barrel")
             {
-                if(temp.velocity.x > -2)
+                Rigidbody2D temp = other.GetComponent<Rigidbody2D>();
+                if (left)
                 {
-                    temp.velocity = new Vector2(temp.velocity.x - 0.1f, temp.velocity.y);
+                    if (temp.velocity.x > -2)
+                    {
+                        temp.velocity = new Vector2(temp.velocity.x - 0.1f, temp.velocity.y);
+                    }
                 }
-            }
-            else
-            {
-                if (temp.velocity.x < 2)
+                else
                 {
-                    temp.velocity = new Vector2(temp.velocity.x + 0.1f, temp.velocity.y);
+                    if (temp.velocity.x < 2)
+                    {
+                        temp.velocity = new Vector2(temp.velocity.x + 0.1f, temp.velocity.y);
+                    }
                 }
             }
         }

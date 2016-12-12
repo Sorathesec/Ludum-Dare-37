@@ -9,6 +9,7 @@ namespace LudumDare37
         public bool canMoveInAir = true;
         Rigidbody2D myBody;
         bool isGrounded = true;
+        bool animating = true;
         float y = 0;
         Vector2 movement;
         Vector3 startPos;
@@ -31,7 +32,7 @@ namespace LudumDare37
         {
             float x = Input.GetAxis("Horizontal");
 
-            if (isGrounded)
+            if (isGrounded && !animating)
             {
                 if (x == 0)
                 {
@@ -97,7 +98,6 @@ namespace LudumDare37
         public void NoLongerGrounded()
         {
             isGrounded = false;
-            Invoke("Grounded", 0.8f);
         }
 
         public void Grounded()

@@ -12,12 +12,20 @@ public class ReplaceCursor : MonoBehaviour {
     void Start()
     {
         Cursor.visible = false;
-        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+    }
+
+    void Update()
+    {
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    void OnDisable()
+    {
+        Cursor.visible = true;
     }
 
     void OnGUI()
     {
         GUI.DrawTexture(new Rect(Input.mousePosition.x - cursorSizeX / 2, (Screen.height - Input.mousePosition.y) - cursorSizeY / 2, cursorSizeX, cursorSizeY), cursorTexture);
     }
-
 }
