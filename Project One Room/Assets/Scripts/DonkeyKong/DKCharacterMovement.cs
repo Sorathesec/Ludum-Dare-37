@@ -9,7 +9,6 @@ namespace LudumDare37
         public bool canMoveInAir = true;
         Rigidbody2D myBody;
         bool isGrounded = true;
-        bool animating = true;
         float y = 0;
         Vector2 movement;
         Vector3 startPos;
