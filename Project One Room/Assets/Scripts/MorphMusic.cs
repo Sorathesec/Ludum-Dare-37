@@ -6,6 +6,7 @@ namespace LudumDare37
     public class MorphMusic : MonoBehaviour
     {
         AudioSource[] sources;
+        private float morphPoint = 0.0f;
         // Use this for initialization
         void Start()
         {
@@ -17,11 +18,14 @@ namespace LudumDare37
         {
             float currentValue = FearController.instance.fearLevel;
 
-            float asPercentage = currentValue / 100.0f;
+            if (currentValue > morphPoint)
+            {
+                float asPercentage = currentValue / 100.0f;
 
-            sources[0].volume = 1.0f - asPercentage;
+                sources[0].volume = 1.0f - asPercentage;
 
-            sources[1].volume = asPercentage;
+                sources[1].volume = asPercentage;
+            }
         }
     }
 }

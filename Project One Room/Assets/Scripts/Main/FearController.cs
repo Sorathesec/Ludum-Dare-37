@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -26,6 +27,9 @@ namespace LudumDare37
 
         [SerializeField]
         private GameObject jumpScare;
+
+        [SerializeField]
+        private AudioMixer mixer;
 
         private float finishTimer;
 
@@ -56,10 +60,6 @@ namespace LudumDare37
             }
         }
 
-        public void RestartGame()
-        {
-    }
-
         public void StartGame()
         {
             isPlaying = true;
@@ -70,11 +70,23 @@ namespace LudumDare37
         {
             gameOver = true;
             victoryScreen.SetActive(true);
+
+            isPlaying = false;
         }
 
         private void GameOver()
         {
             gameOver = true;
+            FadeMusic.instance.switchToNothing();
+
+            isPlaying = false;
+
+            float delay = Random.Range(4.0f, 6.0f);
+            Invoke("ShowJumpScare", delay);
+        }
+
+        private void ShowJumpScare()
+        {
             jumpScare.SetActive(true);
             jumpScare.GetComponent<Animator>().Play("JumpscareAnimation");
             Invoke("ShowLossScreen", 3.0f);
@@ -91,6 +103,7 @@ namespace LudumDare37
             while (fearLevel < 100)
             {
                 fearLevel++;
+                GetComponent<AudioSource>().volume = fearLevel / 2000.0f;
                 yield return new WaitForSeconds(fearIncreaseDelay);
             }
             if(!gameOver)

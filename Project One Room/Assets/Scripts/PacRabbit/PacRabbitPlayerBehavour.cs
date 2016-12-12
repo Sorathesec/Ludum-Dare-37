@@ -32,6 +32,8 @@ namespace LudumDare37
                     canKill = true;
                     other.gameObject.SetActive(false);
 
+                    CancelInvoke();
+
                     Invoke("NoMoreKilling", PowerupTimer);
 
                     EventManager.TriggerEvent("EnemiesKillable");

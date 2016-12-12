@@ -31,7 +31,8 @@ namespace LudumDare37
         void Update()
         {
             if (canInteract && 
-                Input.GetKeyDown(KeyCode.E))
+                Input.GetKeyDown(KeyCode.E) &&
+                FearController.isPlaying)
             {
                 GameObject.FindWithTag("Player").GetComponent<MoveCharacter>().enabled = false;
 

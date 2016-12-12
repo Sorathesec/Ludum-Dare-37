@@ -3,10 +3,8 @@ using System.Collections;
 
 namespace LudumDare37
 {
-
     public class DestroyPlayer : MonoBehaviour
     {
-
         void OnTriggerEnter2D(Collider2D other)
         {
             // If the entering collider is the player...
@@ -14,7 +12,6 @@ namespace LudumDare37
             {
                 DKController.instance.RemoveLife();
             }
-
         }
     }
 }
