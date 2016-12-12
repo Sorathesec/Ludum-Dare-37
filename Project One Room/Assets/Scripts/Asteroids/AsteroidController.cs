@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace LudumDare37
 {
@@ -107,7 +108,7 @@ namespace LudumDare37
             diminishingReturns = diminishingReturns / 3 * 2;
 
             FadeMusic.instance.switchToRoom();
-            Application.LoadLevel("Main");
+            SceneManager.LoadScene("Main");
         }
 
         public void RemoveLife()
@@ -149,7 +150,8 @@ namespace LudumDare37
             FearController.instance.AddFear(fearPenaltyValue);
 
             FadeMusic.instance.switchToRoom();
-            Application.LoadLevel("Main");
+
+            SceneManager.LoadScene("Main");
         }
     }
 }

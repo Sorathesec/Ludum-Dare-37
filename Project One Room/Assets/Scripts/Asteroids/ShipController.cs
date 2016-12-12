@@ -5,13 +5,13 @@ public class ShipController : MonoBehaviour {
 
     public float speed = 5.0f;
     Vector2 movement;
-    Rigidbody2D rigidbody2D;
+    Rigidbody2D theRigidbody2D;
 
     private Vector3 startPos;
 
     void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        theRigidbody2D = GetComponent<Rigidbody2D>();
 
         startPos = transform.position;
     }
@@ -31,15 +31,15 @@ public class ShipController : MonoBehaviour {
     {
         movement.Set(x, y);
         //movement = movement.normalized;
-        rigidbody2D.velocity = movement * speed;
-        rigidbody2D.angularVelocity = 0.0f;
+        theRigidbody2D.velocity = movement * speed;
+        theRigidbody2D.angularVelocity = 0.0f;
     }
 
     public void Reset()
     {
         movement = Vector2.zero;
-        rigidbody2D.velocity = Vector2.zero;
-        rigidbody2D.angularVelocity = 0.0f;
+        theRigidbody2D.velocity = Vector2.zero;
+        theRigidbody2D.angularVelocity = 0.0f;
         transform.position = startPos;
     }
 }

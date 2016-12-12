@@ -14,6 +14,7 @@ namespace LudumDare37
 
         [SerializeField]
         private float fearIncreaseDelay = 5;
+
         [SerializeField]
         private float survivalTimer = 600;
 
@@ -22,6 +23,9 @@ namespace LudumDare37
 
         [SerializeField]
         private GameObject lossScreen;
+
+        [SerializeField]
+        private GameObject jumpScare;
 
         private float finishTimer;
 
@@ -54,7 +58,7 @@ namespace LudumDare37
 
         public void StartGame()
         {
-            FearController.isPlaying = true;
+            isPlaying = true;
             StartCoroutine(IncreaseFear());
         }
 
@@ -67,6 +71,12 @@ namespace LudumDare37
         private void GameOver()
         {
             gameOver = true;
+            jumpScare.SetActive(true);
+            Invoke("ShowLossScreen", 3.0f);
+        }
+
+        private void ShowLossScreen()
+        {
             lossScreen.SetActive(true);
         }
 

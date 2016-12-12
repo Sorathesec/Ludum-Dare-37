@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace LudumDare37
 {
@@ -108,7 +109,7 @@ namespace LudumDare37
                 diminishingReturns = diminishingReturns / 3;
 
                 FadeMusic.instance.switchToRoom();
-                Application.LoadLevel("Main");
+                SceneManager.LoadScene("Main");
 
                 Invoke("ReturnToMenu", 1.0f);
             }
@@ -117,7 +118,8 @@ namespace LudumDare37
         void ReturnToMenu()
         {
             FadeMusic.instance.switchToRoom();
-            Application.LoadLevel("Main");
+
+            SceneManager.LoadScene("Main");
         }
 
         void Miss()

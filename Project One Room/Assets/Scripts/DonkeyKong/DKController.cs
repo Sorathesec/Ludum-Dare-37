@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace LudumDare37
 {
@@ -9,8 +10,6 @@ namespace LudumDare37
         // Public variables
         // Static variables
         public static DKController instance;
-
-        private bool playing = false;
 
         [SerializeField]
         private Text displayText;
@@ -70,12 +69,10 @@ namespace LudumDare37
         private void StartTimer()
         {
             StartCoroutine(FadeOutText());
-            playing = true;
         }
 
         public void Victory()
         {
-            playing = false;
             int fearReduction = (int)(fearRemovalValue / diminishingReturns);
             if (fearReduction < 1)
             {
@@ -87,7 +84,7 @@ namespace LudumDare37
             diminishingReturns = diminishingReturns / 3 * 2;
 
             FadeMusic.instance.switchToRoom();
-            Application.LoadLevel("Main");
+            SceneManager.LoadScene("Main");
         }
 
         public void RemoveLife()
@@ -129,7 +126,7 @@ namespace LudumDare37
         {
             FearController.instance.AddFear(fearPenaltyValue);
             FadeMusic.instance.switchToRoom();
-            Application.LoadLevel("Main");
+            SceneManager.LoadScene("Main");
         }
     }
 }

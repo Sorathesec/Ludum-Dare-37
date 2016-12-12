@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace LudumDare37
 {
@@ -43,7 +44,7 @@ namespace LudumDare37
         {
             FadeMusic.instance.switchToGame();
 
-            Application.LoadLevel(minigameScene);
+            SceneManager.LoadScene(minigameScene);
         }
     }
 }

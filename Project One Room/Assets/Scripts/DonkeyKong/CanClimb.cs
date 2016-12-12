@@ -14,7 +14,7 @@ namespace LudumDare37
         public float speed = 2.0f;
         Vector2 movement;
         float barrelVelocity;
-        Rigidbody2D rigidbody2D;
+        Rigidbody2D theRigidbody2D;
         public Rigidbody2D barrelbody2D;
         public GameObject character;
         float randomNumber = 100.0f;
@@ -31,7 +31,7 @@ namespace LudumDare37
         {
             if (character != null)
             {
-                rigidbody2D = character.GetComponent<Rigidbody2D>();
+                theRigidbody2D = character.GetComponent<Rigidbody2D>();
             }
         }
 
@@ -44,17 +44,17 @@ namespace LudumDare37
                 {
                     float y = Input.GetAxis("Vertical");
                     movement.Set(x, y);
-                    rigidbody2D.velocity = movement * speed;
+                    theRigidbody2D.velocity = movement * speed;
                     BlockCollider1.enabled = false;
-                    rigidbody2D.GetComponent<Rigidbody2D>().gravityScale = 0;
-                    rigidbody2D.GetComponent<Rigidbody2D>().drag = 10;
+                    theRigidbody2D.GetComponent<Rigidbody2D>().gravityScale = 0;
+                    theRigidbody2D.GetComponent<Rigidbody2D>().drag = 10;
                 }
 
                 if (playerInRange == true && (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)))
                 {
                     float y = Input.GetAxis("Vertical");
                     movement.Set(x, y);
-                    rigidbody2D.velocity = -movement * -speed;
+                    theRigidbody2D.velocity = -movement * -speed;
                     BlockCollider1.enabled = false;
                 }
 

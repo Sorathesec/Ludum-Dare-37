@@ -1,25 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class DetectMouse : MonoBehaviour
+namespace LudumDare37
 {
-    void Update()
+    public class DetectMouse : MonoBehaviour
     {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    }
-
-    void OnTriggerEnter2D(Collider2D target)
-    {
-        if (target.CompareTag("Shootable"))
+        void Update()
         {
-            Destroy(gameObject);
-            GameOver();
+            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+
+        void OnTriggerEnter2D(Collider2D target)
+        {
+            if (target.CompareTag("Shootable"))
+            {
+                Destroy(gameObject);
+                GameOver();
+            }
+        }
+
+        void GameOver()
+        {
+            SceneManager.LoadScene("MazeGame");
         }
     }
-
-    void GameOver()
-    {
-        Application.LoadLevel(Application.loadedLevel);
-    }
-
 }
