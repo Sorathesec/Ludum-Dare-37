@@ -34,7 +34,6 @@ namespace LudumDare37
 
         private static float diminishingReturns = 1.0f;
 
-
         void Awake()
         {
             if (instance == null)

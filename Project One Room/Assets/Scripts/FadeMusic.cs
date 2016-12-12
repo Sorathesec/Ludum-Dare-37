@@ -24,6 +24,12 @@ public class FadeMusic : MonoBehaviour
         DontDestroyOnLoad(instance);
     }
 
+    void Start()
+    {
+        masterMixer.GetFloat("MainRoomVol", out mainRoomVol);
+        masterMixer.GetFloat("GameRoomVol", out gameRoomVol);
+    }
+
     public void switchToGame()
     {
         StartCoroutine(ToGame());
@@ -36,18 +42,19 @@ public class FadeMusic : MonoBehaviour
 
     IEnumerator ToGame()
     {
-        for (int i = 0; i < 200; i++)
+        for (int i = 0; i < 100; i++)
         {
-            masterMixer.GetFloat("GameRoomVol", out gameRoomVol);
             if (gameRoomVol < -10)
             {
                 gameRoomVol += 1f;
                 masterMixer.SetFloat("GameRoomVol", gameRoomVol);
             }
 
-            masterMixer.GetFloat("MainRoomVol", out mainRoomVol);
-            mainRoomVol -= 1f;
-            masterMixer.SetFloat("MainRoomVol", mainRoomVol);
+            if (mainRoomVol > -80)
+            {
+                mainRoomVol -= 1f;
+                masterMixer.SetFloat("MainRoomVol", mainRoomVol);
+            }
 
             yield return new WaitForSeconds(0.01f);
         }
@@ -55,15 +62,16 @@ public class FadeMusic : MonoBehaviour
 
     IEnumerator ToRoom()
     {
-        for (int i = 0; i < 200; i++)
+        for (int i = 0; i < 100; i++)
         {
-            masterMixer.GetFloat("GameRoomVol", out gameRoomVol);
-            gameRoomVol -= 1f;
-            masterMixer.SetFloat("GameRoomVol", gameRoomVol);
+            if (gameRoomVol > -80)
+            {
+                gameRoomVol -= 1f;
+                masterMixer.SetFloat("GameRoomVol", gameRoomVol);
+            }
 
             if (mainRoomVol < -10)
             {
-                masterMixer.GetFloat("MainRoomVol", out mainRoomVol);
                 mainRoomVol += 1f;
                 masterMixer.SetFloat("MainRoomVol", mainRoomVol);
             }
