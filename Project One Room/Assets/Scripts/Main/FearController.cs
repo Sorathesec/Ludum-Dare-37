@@ -56,6 +56,10 @@ namespace LudumDare37
             }
         }
 
+        public void RestartGame()
+        {
+    }
+
         public void StartGame()
         {
             isPlaying = true;
@@ -72,12 +76,14 @@ namespace LudumDare37
         {
             gameOver = true;
             jumpScare.SetActive(true);
+            jumpScare.GetComponent<Animator>().Play("JumpscareAnimation");
             Invoke("ShowLossScreen", 3.0f);
         }
 
         private void ShowLossScreen()
         {
             lossScreen.SetActive(true);
+            jumpScare.GetComponent<Animator>().Stop();
         }
 
         IEnumerator IncreaseFear()

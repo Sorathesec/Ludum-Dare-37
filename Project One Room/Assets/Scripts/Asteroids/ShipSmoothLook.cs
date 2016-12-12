@@ -3,7 +3,6 @@ using System.Collections;
 
 namespace LudumDare37
 {
-
     public class ShipSmoothLook : MonoBehaviour
     {
 

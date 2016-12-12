@@ -15,12 +15,12 @@ namespace Netaphous.Utilities
             instance = this;
         }
 
-        public void LoadLevel(int level)
+        public static void LoadLevel(int level)
         {
             SceneManager.LoadScene(level);
         }
 
-        public void LoadLevel(string name)
+        public static void LoadLevel(string name)
         {
             SceneManager.LoadScene(name);
         }
