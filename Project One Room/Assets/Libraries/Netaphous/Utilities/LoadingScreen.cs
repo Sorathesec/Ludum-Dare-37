@@ -10,7 +10,7 @@ namespace Netaphous.Utilities
         // Use this for initialization
         void Start()
         {
-            LoadScene.instance.LoadLevel(levelName);
+            LoadScene.LoadLevel(levelName);
         }
     }
 }

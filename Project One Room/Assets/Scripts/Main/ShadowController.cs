@@ -26,7 +26,7 @@ namespace LudumDare37
         SpriteRenderer aStage;
         Color newColor;
 
-        void Start()
+        void Awake()
         {
             stages = new SpriteRenderer[7];
 
@@ -43,22 +43,26 @@ namespace LudumDare37
         void Update()
         {
             float currentFear = FearController.instance.fearLevel;
-            if (currentFear < 100 && currentFear > (100 / 7) * currentStage)
+
+            if (currentFear < 100)
             {
-                currentStage++;
+                if (currentFear > (100 / 7) * currentStage)
+                {
+                    currentStage++;
+                }
+
+                aStage = stages[currentStage - 1];
+                newColor = aStage.color;
+                float irrelevantFear = (100 / 7) * (currentStage - 1);
+                float relevantFear = currentFear - irrelevantFear;
+
+                float thresholdPerc = 100 / 7;
+
+                float percValue = relevantFear / thresholdPerc;
+
+                newColor.a = percValue;
+                aStage.color = newColor;
             }
-            
-            aStage = stages[currentStage - 1];
-            newColor = aStage.color;
-            float irrelevantFear = (100 / 7) * (currentStage - 1);
-            float relevantFear = currentFear - irrelevantFear;
-
-            float thresholdPerc = 100 / 7;
-
-            float percValue = relevantFear / thresholdPerc;
-
-            newColor.a = percValue;
-            aStage.color = newColor;
         }
     }
 }
