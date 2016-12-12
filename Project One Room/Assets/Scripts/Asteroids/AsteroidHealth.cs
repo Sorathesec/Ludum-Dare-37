@@ -4,14 +4,13 @@ using System.Collections;
 public class AsteroidHealth : MonoBehaviour {
 
     public int health = 3;
-    public AudioClip deathClip;
-    public GameObject explosionPrefab;
     int randomAsteroid;
     public GameObject[] asteroidPrefabs;
     GameObject newAstroid;
     Quaternion randomRotation;
     Vector2 randomPosition;
     int numberOfAstroids;
+    public float AsteroidRange=5.49f;
     
 
     public void TakeDamage(int damage)
@@ -27,15 +26,15 @@ public class AsteroidHealth : MonoBehaviour {
 
     void destroyAstroid()
     {
-        numberOfAstroids = Mathf.RoundToInt(Random.Range(0.49f, 5.49f));
-        if (numberOfAstroids == 1)
+        numberOfAstroids = Mathf.RoundToInt(Random.Range(2.48f, AsteroidRange));
+        if (numberOfAstroids == 3)
         {
             randomPosition = new Vector2(gameObject.transform.position.x + Random.Range(-0.5f, 0.5f), gameObject.transform.position.y + Random.Range(-0.5f, 0.5f));
             randomRotation = Quaternion.Euler(0f, 0f, gameObject.transform.rotation.z + Random.Range(-0f, 360f));
             randomAsteroid = Mathf.RoundToInt(Random.Range(-0.49f, 2.49f));
             Instantiate(asteroidPrefabs[randomAsteroid], randomPosition, randomRotation);
         }
-        else if (numberOfAstroids == 2)
+        else if (numberOfAstroids == 4)
         {
             randomPosition = new Vector2(gameObject.transform.position.x + Random.Range(-0.5f, 0.5f), gameObject.transform.position.y + Random.Range(-0.5f, 0.5f));
             randomRotation = Quaternion.Euler(0f, 0f, gameObject.transform.rotation.z + Random.Range(-0f, 140f));
@@ -46,7 +45,7 @@ public class AsteroidHealth : MonoBehaviour {
             randomAsteroid = Mathf.RoundToInt(Random.Range(-0.49f, 2.49f));
             Instantiate(asteroidPrefabs[randomAsteroid], randomPosition, randomRotation);
         }
-        else if (numberOfAstroids == 3)
+        else if (numberOfAstroids == 5 || numberOfAstroids == 6)
         {
 
             randomPosition = new Vector2(gameObject.transform.position.x + Random.Range(-0.5f, 0.5f), gameObject.transform.position.y + Random.Range(-0.5f, 0.5f));
