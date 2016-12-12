@@ -40,6 +40,11 @@ public class FadeMusic : MonoBehaviour
         StartCoroutine(ToRoom());
     }
 
+    public void switchToNothing()
+    {
+        StartCoroutine(ToNothing());
+    }
+
     IEnumerator ToGame()
     {
         for (int i = 0; i < 100; i++)
@@ -73,6 +78,26 @@ public class FadeMusic : MonoBehaviour
             if (mainRoomVol < -10)
             {
                 mainRoomVol += 1f;
+                masterMixer.SetFloat("MainRoomVol", mainRoomVol);
+            }
+
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+    IEnumerator ToNothing()
+    {
+        for (int i = 0; i < 200; i++)
+        {
+            if (gameRoomVol > -80)
+            {
+                gameRoomVol -= 0.05f;
+                masterMixer.SetFloat("GameRoomVol", gameRoomVol);
+            }
+
+            if (mainRoomVol > -80)
+            {
+                mainRoomVol -= 0.05f;
                 masterMixer.SetFloat("MainRoomVol", mainRoomVol);
             }
 

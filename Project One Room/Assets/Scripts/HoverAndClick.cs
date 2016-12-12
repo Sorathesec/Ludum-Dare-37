@@ -30,7 +30,7 @@ namespace LudumDare37
         private void ActivateGame()
         {
             gameObject.SetActive(false);
-            GameObject.FindWithTag("Player").GetComponent<MoveCharacter>().enabled = true;
+            GameObject.FindWithTag("Player").SetActive(true);
         }
 
         void OnTriggerEnter2D(Collider2D other)
