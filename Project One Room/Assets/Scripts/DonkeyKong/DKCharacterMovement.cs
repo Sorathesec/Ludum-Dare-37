@@ -32,7 +32,7 @@ namespace LudumDare37
         {
             float x = Input.GetAxis("Horizontal");
 
-            if (isGrounded && !animating)
+            if (isGrounded)
             {
                 if (x == 0)
                 {
@@ -100,9 +100,12 @@ namespace LudumDare37
             isGrounded = false;
         }
 
-        public void Grounded()
+        void OnTriggerEnter2D(Collider2D other)
         {
-            isGrounded = true;
+            if(other.tag == "PacmanWall")
+            {
+                isGrounded = true;
+            }
         }
     }
 }
