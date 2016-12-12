@@ -107,10 +107,7 @@ namespace LudumDare37
                 FearController.instance.RemoveFear(fearReduction);
 
                 diminishingReturns = diminishingReturns / 3;
-
-                FadeMusic.instance.switchToRoom();
-                SceneManager.LoadScene("Main");
-
+                
                 Invoke("ReturnToMenu", 1.0f);
             }
         }

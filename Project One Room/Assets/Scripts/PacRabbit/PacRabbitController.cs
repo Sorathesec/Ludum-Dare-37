@@ -153,9 +153,14 @@ namespace LudumDare37
 
         private void EndGame()
         {
-            FearController.instance.AddFear(fearPenaltyValue);
-            FadeMusic.instance.switchToRoom();
-            SceneManager.LoadScene("Main");
+            if (FearController.isPlaying)
+            {
+                FearController.instance.AddFear(fearPenaltyValue);
+
+                FadeMusic.instance.switchToRoom();
+
+                SceneManager.LoadScene("Main");
+            }
         }
 
         public void RemoveCount()
