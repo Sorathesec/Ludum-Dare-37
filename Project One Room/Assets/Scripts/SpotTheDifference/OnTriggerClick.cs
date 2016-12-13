@@ -25,6 +25,7 @@ namespace LudumDare37
         Collider2D target;
         public GameObject Wrong;
         Animator wrongAnimator;
+        SpriteRenderer wrongSprite;
         List<Collider2D> colliders = new List<Collider2D>();
         [SerializeField]
         private SpriteRenderer errorImage;
@@ -34,6 +35,7 @@ namespace LudumDare37
         void Start()
         {
             wrongAnimator = Wrong.GetComponent<Animator>();
+            wrongSprite = Wrong.GetComponent<SpriteRenderer>();
         }
 
         void Update()
@@ -78,12 +80,12 @@ namespace LudumDare37
                         haveValid = true;
                     }
                 }
-
-                if (!haveValid && target.GetComponent<Animator>() != null)
+                Animator targetAnim = target.GetComponent<Animator>();
+                if (!haveValid && targetAnim != null)
                 {
                     wrongAnimator.enabled = true;
-                    target.GetComponent<Animator>().Play("Miss");
-                    Wrong.GetComponent<SpriteRenderer>().enabled = true;
+                    targetAnim.Play("Miss");
+                    wrongSprite.enabled = true;
                     Invoke("ResetAnimation", 0.755f);
 
                     if (printOnce < 1)
@@ -175,7 +177,7 @@ namespace LudumDare37
         void ResetAnimation()
         {
             wrongAnimator.enabled = false;
-            Wrong.GetComponent<SpriteRenderer>().enabled = false;
+            wrongSprite.enabled = false;
         }
 
         void ResetPrintOnce()
