@@ -98,6 +98,7 @@ namespace LudumDare37
             print(other.gameObject.tag);
             if (other.gameObject.tag == "Player" && !isDead)
             {
+                print("Kill");
                 other.gameObject.GetComponent<PacRabbitPlayerBehavour>().Kill();
             }
         }
