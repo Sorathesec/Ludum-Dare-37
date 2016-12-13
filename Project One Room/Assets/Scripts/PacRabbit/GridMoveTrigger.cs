@@ -34,7 +34,8 @@ namespace LudumDare37
         void OnTriggerEnter2D(Collider2D other)
         {
             if (other.tag != "Collectable" &&
-                other.tag != "KillPill")
+                other.tag != "KillPill" && 
+                !otherColliders.Contains(other))
             {
                 otherColliders.Add(other);
             }

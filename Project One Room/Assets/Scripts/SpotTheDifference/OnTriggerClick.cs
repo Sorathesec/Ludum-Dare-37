@@ -60,8 +60,9 @@ namespace LudumDare37
             {
                 SpriteRenderer targetSprite = target.gameObject.GetComponent<SpriteRenderer>();
 
-                if (targetSprite != null)
-                {
+                if (targetSprite != null && target.GetComponent<AudioSource>().enabled)
+                { 
+                    target.GetComponent<AudioSource>().enabled = false;
                     StartCoroutine(FadeInMarker(targetSprite));
                     circlesHighlighted++;
                     Win();
@@ -141,7 +142,7 @@ namespace LudumDare37
 
                 yield return new WaitForSeconds(0.01f);
             }
-            StartCoroutine(FadeOutDouble());
+            Invoke("ReturnToMenu", 0.5f);
         }
 
         IEnumerator FadeOutDouble()
@@ -170,6 +171,7 @@ namespace LudumDare37
         {
             canClick = false;
             FearController.instance.AddFear(fearPenaltyValue);
+            Invoke("ResetClick", 0.5f);
         }
 
         void ResetAnimation()
