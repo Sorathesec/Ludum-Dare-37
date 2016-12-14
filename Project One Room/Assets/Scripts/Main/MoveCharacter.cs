@@ -5,6 +5,8 @@ namespace LudumDare37
 {
     public class MoveCharacter : MonoBehaviour
     {
+        // Private variables
+        // Accessible in the editor
         [SerializeField]
         private float moveSpeed = 1.0f;
         [SerializeField]
@@ -16,12 +18,18 @@ namespace LudumDare37
         [SerializeField]
         private float maxScale = 1.5f;
 
+        // Code optimisation
         private static Vector3 position;
         private Animator theAnimator;
+        private SpriteRenderer theRenderer;
+        private Vector2 direc;
+        private Vector2 newPos;
+        private Vector2 pos;
 
         void Awake()
         {
             theAnimator = GetComponent<Animator>();
+            theRenderer = GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
@@ -39,25 +47,26 @@ namespace LudumDare37
                 theAnimator.Play("Walk");
             }
 
-            move2D(x, y);
+            Move(x, y);
         }
 
-        void move2D(float x, float y)
+        void Move(float x, float y)
         {
-            Vector2 direc = new Vector2(x, y);
+            direc = new Vector2(x, y);
 
-            Vector2 newPos = (Vector2)transform.position + direc;
+            newPos = (Vector2)transform.position + direc;
 
             transform.position = Vector2.MoveTowards(transform.position, newPos, Time.deltaTime * moveSpeed);
 
             if (transform.position.y < minY)
             {
-                Vector2 pos = new Vector2(transform.position.x, minY);
+                pos = new Vector2(transform.position.x, minY);
                 transform.position = pos;
             }
+
             if (transform.position.y > maxY)
             {
-                Vector2 pos = new Vector2(transform.position.x, maxY);
+                pos = new Vector2(transform.position.x, maxY);
                 transform.position = pos;
             }
 
@@ -80,11 +89,11 @@ namespace LudumDare37
             newScale.y = newScaleValue;
             if (x > 0)
             {
-                GetComponent<SpriteRenderer>().flipX = true;
+                theRenderer.flipX = true;
             }
             else if (x < 0)
             {
-                GetComponent<SpriteRenderer>().flipX = false;
+                theRenderer.flipX = false;
             }
 
             transform.localScale = newScale;

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 83ebe7078dc1d6c42be0e029606e2bfd
-timeCreated: 1481483550
+timeCreated: 1481674926
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -76,32 +76,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character_jump_colour_0
-      rect:
-        serializedVersion: 2
-        x: 1865
-        y: 2354
-        width: 111
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_1
-      rect:
-        serializedVersion: 2
-        x: 2067
-        y: 2403
-        width: 70
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: Character_jump_colour_2
       rect:
         serializedVersion: 2
@@ -109,8 +83,8 @@ TextureImporter:
         y: 1180
         width: 926
         height: 1294
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.59912425, y: 0.36522436}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -122,60 +96,8 @@ TextureImporter:
         y: 1414
         width: 806
         height: 1318
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_4
-      rect:
-        serializedVersion: 2
-        x: 2137
-        y: 2394
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_5
-      rect:
-        serializedVersion: 2
-        x: 1848
-        y: 2251
-        width: 7
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_6
-      rect:
-        serializedVersion: 2
-        x: 2125
-        y: 2216
-        width: 22
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_7
-      rect:
-        serializedVersion: 2
-        x: 1867
-        y: 2206
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5531448, y: 0.20517862}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -187,8 +109,8 @@ TextureImporter:
         y: 472
         width: 604
         height: 1739
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.41388384, y: 0.3346139}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -200,34 +122,8 @@ TextureImporter:
         y: 667
         width: 939
         height: 1528
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_10
-      rect:
-        serializedVersion: 2
-        x: 2014
-        y: 2155
-        width: 81
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_11
-      rect:
-        serializedVersion: 2
-        x: 2108
-        y: 1958
-        width: 12
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49289665, y: 0.31666166}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -240,33 +136,7 @@ TextureImporter:
         width: 8
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_13
-      rect:
-        serializedVersion: 2
-        x: 1997
-        y: 1936
-        width: 73
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_14
-      rect:
-        serializedVersion: 2
-        x: 2084
-        y: 1934
-        width: 35
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -278,60 +148,8 @@ TextureImporter:
         y: 386
         width: 933
         height: 1517
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_16
-      rect:
-        serializedVersion: 2
-        x: 2120
-        y: 1873
-        width: 21
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_17
-      rect:
-        serializedVersion: 2
-        x: 3439
-        y: 1392
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_18
-      rect:
-        serializedVersion: 2
-        x: 3445
-        y: 1375
-        width: 42
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_19
-      rect:
-        serializedVersion: 2
-        x: 4622
-        y: 1399
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.54289407, y: 0.34391177}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -343,8 +161,8 @@ TextureImporter:
         y: 379
         width: 1242
         height: 1239
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.62317383, y: 0.41109994}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -357,20 +175,7 @@ TextureImporter:
         width: 997
         height: 920
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_jump_colour_22
-      rect:
-        serializedVersion: 2
-        x: 6614
-        y: 355
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

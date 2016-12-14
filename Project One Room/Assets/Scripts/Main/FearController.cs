@@ -7,33 +7,36 @@ namespace LudumDare37
 {
     public class FearController : MonoBehaviour
     {
+        // Public variables
+        // Static variables
         public static FearController instance;
-
         public static bool isPlaying = false;
 
+        // To be accessed by other scripts
+        [HideInInspector]
         public int fearLevel = 0;
 
+        // Private variables
+        // Accessible in the editor
         [SerializeField]
         private float fearIncreaseDelay = 5;
-
         [SerializeField]
         private float survivalTimer = 600;
-
         [SerializeField]
         private GameObject victoryScreen;
-
         [SerializeField]
         private GameObject lossScreen;
-
         [SerializeField]
         private GameObject jumpScare;
-
         [SerializeField]
         private AudioMixer mixer;
 
+        // Script logic
         private float finishTimer;
-
         private bool gameOver = false;
+
+        // Code optimisation
+        private AudioSource theAudioScource;
 
         // Use this for initialization
         void Awake()
@@ -46,15 +49,16 @@ namespace LudumDare37
             {
                 Destroy(gameObject);
             }
-
             DontDestroyOnLoad(instance);
 
-            finishTimer = Time.time + survivalTimer;
+            theAudioScource = GetComponent<AudioSource>();
         }
 
         void Update()
         {
-            if(!gameOver && Time.time >= finishTimer)
+            if(isPlaying && 
+                !gameOver && 
+                Time.time >= finishTimer)
             {
                 Victory();
             }
@@ -63,6 +67,7 @@ namespace LudumDare37
         public void StartGame()
         {
             isPlaying = true;
+            finishTimer = Time.time + survivalTimer;
             StartCoroutine(IncreaseFear());
         }
 
@@ -103,7 +108,7 @@ namespace LudumDare37
             while (fearLevel < 100)
             {
                 fearLevel++;
-                GetComponent<AudioSource>().volume = fearLevel / 2000.0f;
+                theAudioScource.volume = fearLevel / 2000.0f;
                 yield return new WaitForSeconds(fearIncreaseDelay);
             }
             if(!gameOver)

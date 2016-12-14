@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0a7b37d27c8b45d45991ea317144b3af
-timeCreated: 1481483441
+timeCreated: 1481674696
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -73,47 +73,8 @@ TextureImporter:
         y: 713
         width: 858
         height: 1555
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_Interaction sequence_1
-      rect:
-        serializedVersion: 2
-        x: 4562
-        y: 2109
-        width: 65
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_Interaction sequence_2
-      rect:
-        serializedVersion: 2
-        x: 4605
-        y: 2209
-        width: 85
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_Interaction sequence_3
-      rect:
-        serializedVersion: 2
-        x: 4633
-        y: 2203
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.56440014, y: 0.3168636}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -125,21 +86,8 @@ TextureImporter:
         y: 708
         width: 503
         height: 1535
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_Interaction sequence_5
-      rect:
-        serializedVersion: 2
-        x: 4644
-        y: 2107
-        width: 31
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.59295106, y: 0.29786348}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -151,47 +99,8 @@ TextureImporter:
         y: 716
         width: 1075
         height: 1303
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_Interaction sequence_7
-      rect:
-        serializedVersion: 2
-        x: 4315
-        y: 1842
-        width: 119
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_Interaction sequence_8
-      rect:
-        serializedVersion: 2
-        x: 348
-        y: 1583
-        width: 24
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_Interaction sequence_9
-      rect:
-        serializedVersion: 2
-        x: 2798
-        y: 1577
-        width: 11
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6067544, y: 0.3108032}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -203,8 +112,8 @@ TextureImporter:
         y: 709
         width: 941
         height: 1121
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.65809155, y: 0.42037606}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -216,21 +125,8 @@ TextureImporter:
         y: 705
         width: 1148
         height: 787
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Character_Interaction sequence_12
-      rect:
-        serializedVersion: 2
-        x: 4604
-        y: 643
-        width: 230
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.659205, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
